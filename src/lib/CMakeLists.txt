@@ -1,0 +1,26 @@
+project(LibraryPlayground)
+
+add_library(${PROJECT_NAME})
+
+target_sources(${PROJECT_NAME}
+    PRIVATE
+    src/StringUtil.cpp
+
+    PUBLIC
+    FILE_SET HEADERS
+    BASE_DIRS include
+    FILES
+    include/o-lukas/LibraryPlayground/StringUtil.hpp
+)
+
+target_include_directories(${PROJECT_NAME} PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
+
+install(TARGETS ${PROJECT_NAME}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    FILE_SET HEADERS DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
