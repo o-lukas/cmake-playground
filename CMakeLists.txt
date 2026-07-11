@@ -10,7 +10,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(CTest)
 include(GNUInstallDirs)
 
-set(CMAKE_CXX_CLANG_TIDY clang-tidy;-config-file=${CMAKE_SOURCE_DIR}/.clang-tidy)
+find_program(CLANG_TIDY_EXECUTABLE clang-tidy)
+if(CLANG_TIDY_EXECUTABLE)
+    set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_EXECUTABLE};-config-file=${CMAKE_SOURCE_DIR}/.clang-tidy")
+else()
+    message(WARNING "Clang-Tidy executable not found. Static analysis will be disabled.")
+endif()
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(src)
