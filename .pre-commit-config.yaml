@@ -12,3 +12,10 @@ repos:
     rev: 'v22.1.5'
     hooks:
     -   id: clang-format
+-   repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.16.4
+    hooks:
+    -   id: commitizen
+    -   id: commitizen-branch
+        stages:
+        - pre-push
