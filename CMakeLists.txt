@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+include(cmake/GenerateVersion.cmake)
+
 project(CMakePlayground)
 
 include(CTest)
@@ -11,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_subdirectory(src)
 
 set(CPACK_PACKAGE_NAME "CMakePlayground")
-set(CPACK_PACKAGE_VERSION "0.1.0")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
 set(CPACK_PACKAGE_CONTACT "meteor.kiwi-0i@icloud.com")
 set(CPACK_GENERATOR "TGZ;ZIP")
 
