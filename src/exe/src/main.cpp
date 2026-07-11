@@ -10,13 +10,13 @@ enum class CaseMode {
   kLower,
 };
 
-void printUsage(const char *program_name) {
+void printUsage(const char* program_name) {
   std::cerr << "Usage: " << program_name << " [--upper|--lower] <string>\n";
 }
 
 }  // namespace o_lukas::ExecutablePlayground
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   auto mode = o_lukas::ExecutablePlayground::CaseMode::kLower;
   std::string input;
 
