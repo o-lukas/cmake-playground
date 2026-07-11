@@ -4,6 +4,9 @@ include(cmake/GenerateVersion.cmake)
 
 project(CMakePlayground)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 include(CTest)
 include(GNUInstallDirs)
 
