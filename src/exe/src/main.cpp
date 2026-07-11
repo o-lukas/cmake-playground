@@ -1,53 +1,35 @@
+#include <CLI/CLI.hpp>
 #include <iostream>
 #include <string>
 
 #include "o-lukas/LibraryPlayground/StringUtil.hpp"
 
-namespace o_lukas::ExecutablePlayground {
-
-enum class CaseMode {
-  kUpper,
-  kLower,
-};
-
-void printUsage(const char* program_name) {
-  std::cerr << "Usage: " << program_name << " [--upper|--lower] <string>\n";
-}
-
-}  // namespace o_lukas::ExecutablePlayground
-
 int main(int argc, char** argv) {
-  auto mode = o_lukas::ExecutablePlayground::CaseMode::kLower;
   std::string input;
 
-  for (int i = 1; i < argc; ++i) {
-    const std::string argument = argv[i];
+  CLI::App app{"Convert input text to upper or lower case."};
 
-    if (argument == "--upper" || argument == "-u") {
-      mode = o_lukas::ExecutablePlayground::CaseMode::kUpper;
-      continue;
-    }
+  bool upper = false;
+  bool lower = false;
 
-    if (argument == "--lower" || argument == "-l") {
-      mode = o_lukas::ExecutablePlayground::CaseMode::kLower;
-      continue;
-    }
+  app.add_flag("-u, --upper", upper, "Convert input to upper case")
+      ->excludes("-l, --lower");
+  app.add_flag("-l, --lower", lower, "Convert input to lower case")
+      ->excludes("-u, --upper");
+  app.add_option("input", input, "Input string to transform")->required();
 
-    if (!input.empty()) {
-      input += ' ';
-    }
-    input += argument;
+  try {
+    app.parse(argc, argv);
+  } catch (const CLI::ParseError& e) {
+    return app.exit(e);
   }
 
-  if (input.empty()) {
-    o_lukas::ExecutablePlayground::printUsage(argv[0]);
-    return 1;
+  std::string output = input;
+  if (upper) {
+    output = o_lukas::LibraryPlayground::StringUtil::toUpper(input);
+  } else if (lower) {
+    output = o_lukas::LibraryPlayground::StringUtil::toLower(input);
   }
-
-  const std::string output =
-      mode == o_lukas::ExecutablePlayground::CaseMode::kUpper
-          ? o_lukas::LibraryPlayground::StringUtil::toUpper(input)
-          : o_lukas::LibraryPlayground::StringUtil::toLower(input);
 
   std::cout << output << '\n';
   return 0;

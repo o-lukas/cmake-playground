@@ -54,6 +54,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install Conan
+      uses: conan-io/setup-conan@v1
+
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: strings
@@ -69,6 +72,7 @@ jobs:
         -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
         -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
         -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+        -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=${{ github.workspace }}/extern/conan_provider.cmake
         -S ${{ github.workspace }}
 
     - name: Build
