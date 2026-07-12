@@ -1,18 +1,16 @@
-#include <iostream>
-#include <string>
-
+#include "gtest/gtest.h"
 #include "o-lukas/LibraryPlayground/StringUtil.hpp"
 
-int main() {
+TEST(StringUtilTest, ToUpper) {
   const std::string input = "Hello, World!";
-
-  const std::string upper =
+  const std::string output =
       o_lukas::LibraryPlayground::StringUtil::toUpper(input);
-  const std::string lower =
+  EXPECT_EQ(output, "HELLO, WORLD!");
+}
+
+TEST(StringUtilTest, ToLower) {
+  const std::string input = "Hello, World!";
+  const std::string output =
       o_lukas::LibraryPlayground::StringUtil::toLower(input);
-
-  std::cout << "Upper: " << upper << '\n';
-  std::cout << "Lower: " << lower << '\n';
-
-  return (upper == "HELLO, WORLD!") && (lower == "hello, world!") ? 0 : 1;
+  EXPECT_EQ(output, "hello, world!");
 }

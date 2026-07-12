@@ -1,5 +1,6 @@
 [requires]
 cli11/2.6.2
+gtest/1.17.0
 
 [layout]
 cmake_layout
