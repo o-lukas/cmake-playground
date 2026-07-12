@@ -1,3 +1,9 @@
+## v0.1.1 (2026-07-12)
+
+### Fix
+
+- use permissions instead of GH_TOKEN
+
 ## v0.1.0 (2026-07-12)
 
 ### Feat
