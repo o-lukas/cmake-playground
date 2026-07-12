@@ -82,3 +82,18 @@ jobs:
     - name: Package
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       run: cpack -C ${{ matrix.build_type }}
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: installers
+        path: |
+          ${{ steps.strings.outputs.build-output-dir }}/*.deb
+          ${{ steps.strings.outputs.build-output-dir }}/*.rpm
+          ${{ steps.strings.outputs.build-output-dir }}/*.tar.gz
+          ${{ steps.strings.outputs.build-output-dir }}/*.zip
+          ${{ steps.strings.outputs.build-output-dir }}/*.dmg
+          ${{ steps.strings.outputs.build-output-dir }}/*.exe
+          ${{ steps.strings.outputs.build-output-dir }}/*.msi
+          ${{ steps.strings.outputs.build-output-dir }}/*.sh
+          ${{ steps.strings.outputs.build-output-dir }}/*.pkg
