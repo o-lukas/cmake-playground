@@ -2,6 +2,7 @@
   "cmake.buildDirectory": "${workspaceFolder}/out/build",
   "cmake.installPrefix": "${workspaceFolder}/out/install",
   "cmake.configureArgs": [
-    "-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=${workspaceFolder}/extern/conan_provider.cmake"
+    "-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=${workspaceFolder}/extern/conan_provider.cmake",
+    "-DCPACK_PACKAGE_DIRECTORY=${workspaceFolder}/out/pack"
   ]
 }
