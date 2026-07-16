@@ -26,3 +26,4 @@ if(NOT _semver_match)
 endif()
 
 set(PROJECT_VERSION ${CMAKE_MATCH_1}.${CMAKE_MATCH_2}.${CMAKE_MATCH_3})
+message(STATUS "Project version extracted from Git tag: ${PROJECT_VERSION}")
