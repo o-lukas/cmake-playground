@@ -1,3 +1,10 @@
+## v0.2.0 (2026-07-16)
+
+### Feat
+
+- generate Conan packages
+- export CMake targets
+
 ## v0.1.1 (2026-07-12)
 
 ### Fix
