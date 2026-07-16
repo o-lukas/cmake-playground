@@ -1,3 +1,6 @@
 [submodule "extern/cmake-conan"]
 	path = extern/cmake-conan
 	url = https://github.com/conan-io/cmake-conan.git
+[submodule "extern/cpack-conan"]
+	path = extern/cpack-conan
+	url = https://github.com/bjoernrennfanz/cpack-conan.git
