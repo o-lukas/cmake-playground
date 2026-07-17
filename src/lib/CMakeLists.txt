@@ -36,3 +36,5 @@ install(EXPORT ${PROJECT_NAME}Targets
 install(FILES "${CMAKE_SOURCE_DIR}/LICENSE"
     DESTINATION ${CMAKE_INSTALL_DOCDIR} COMPONENT lib
 )
+
+add_subdirectory(test)
