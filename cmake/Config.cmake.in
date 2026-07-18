@@ -1,0 +1,11 @@
+@PACKAGE_INIT@
+
+set(_CMakePlayground_supported_components LibraryPlayground)
+
+foreach(_comp ${CMakePlayground_FIND_COMPONENTS})
+  if (NOT _comp IN_LIST _CMakePlayground_supported_components)
+    set(CMakePlayground_FOUND False)
+    set(CMakePlayground_NOT_FOUND_MESSAGE "Unsupported component: ${_comp}")
+  endif()
+  include("${CMAKE_CURRENT_LIST_DIR}/CMakePlayground${_comp}Targets.cmake")
+endforeach()
