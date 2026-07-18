@@ -63,6 +63,11 @@ set(CPACK_CONAN_PACKAGE_GENERATORS CMakeConfigDeps)
 set(CPACK_CONAN_PACKAGE_SETTINGS os compiler build_type arch)
 set(CPACK_CONAN_PACKAGE_LICENSE MIT)
 set(CPACK_CONAN_PACKAGE_ADDITIONAL_PYTHON_SCRIPT ${CMAKE_SOURCE_DIR}/conan/ConanFileAdditional.py)
+set(CPACK_CONAN_PACKAGE_TEST_PACKAGE_FILES
+    ${CMAKE_SOURCE_DIR}/conan/test-package/conanfile.py
+    ${CMAKE_SOURCE_DIR}/conan/test-package/CMakeLists.txt
+    ${CMAKE_SOURCE_DIR}/conan/test-package/TestPackage.cpp
+)
 
 if(WIN32)
     set(CPACK_GENERATOR ${CPACK_GENERATOR};NSIS;ZIP)
