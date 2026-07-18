@@ -1,3 +1,23 @@
+## v0.4.0 (2026-07-18)
+
+### BREAKING CHANGE
+
+- project names have changed
+
+### Feat
+
+- **conan**: added conan test package feature
+- **conan**: use xxx-config.cmake files inside package
+- add MathUtil project
+
+### Fix
+
+- remove invalid declarations from includes destination
+
+### Refactor
+
+- rename projects
+
 ## v0.3.0 (2026-07-18)
 
 ### Feat
