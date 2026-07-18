@@ -4,7 +4,6 @@ include(cmake/GenerateVersion.cmake)
 
 project(CommonUtils
     VERSION ${VERSION_FULL}
-    SPDX_LICENSE MIT
     DESCRIPTION "A small CMake playground application"
     HOMEPAGE_URL "https://github.com/o-lukas/cmake-playground"
     LANGUAGES CXX)
@@ -56,6 +55,7 @@ if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.3.0")
         SBOM ${PROJECT_NAME}
         EXPORTS CommonUtilsCliTargets MathUtilsTargets StringUtilsTargets
         DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/sbom
+        LICENSE MIT
         COMPONENT Development
     )
 else()
