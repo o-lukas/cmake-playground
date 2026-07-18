@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/cpp:2-debian13
 
-ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
+ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="4.4.0"
 
 # Optionally install the cmake for vcpkg
 COPY ./reinstall-cmake.sh /tmp/

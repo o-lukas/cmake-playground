@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.24)
 
 include(cmake/GenerateVersion.cmake)
 
-project(CommonUtils LANGUAGES CXX VERSION ${VERSION_FULL})
+project(CommonUtils
+    VERSION ${VERSION_FULL}
+    SPDX_LICENSE MIT
+    DESCRIPTION "A small CMake playground application"
+    HOMEPAGE_URL "https://github.com/o-lukas/cmake-playground"
+    LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -42,6 +47,20 @@ endif()
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(src)
+
+if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.3.0")
+    set(CMAKE_EXPERIMENTAL_GENERATE_SBOM
+        2d856d6d-53e8-488b-a17f-d486d2cac317
+    )
+    install(
+        SBOM ${PROJECT_NAME}
+        EXPORTS CommonUtilsCliTargets MathUtilsTargets StringUtilsTargets
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/sbom
+        COMPONENT Development
+    )
+else()
+    message(STATUS "CMake SBOM support unavailable; skipping SBOM export")
+endif()
 
 set(CPACK_PACKAGE_NAME "CommonUtils")
 set(CPACK_PACKAGE_DESCRIPTION "A small CMake playground application")
