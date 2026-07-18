@@ -1,3 +1,14 @@
+## v0.5.0 (2026-07-18)
+
+### Feat
+
+- generate and install sbom
+- **conan**: use conan lock file
+
+### Fix
+
+- install DLLs to runtime
+
 ## v0.4.0 (2026-07-18)
 
 ### BREAKING CHANGE
