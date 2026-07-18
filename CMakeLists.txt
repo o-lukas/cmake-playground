@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.24)
 
 include(cmake/GenerateVersion.cmake)
 
-project(CMakePlayground LANGUAGES CXX VERSION ${PROJECT_VERSION})
+project(CMakePlayground LANGUAGES CXX VERSION ${VERSION_FULL})
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(CMakePackageConfigHelpers)
 include(CTest)
 include(GNUInstallDirs)
 
