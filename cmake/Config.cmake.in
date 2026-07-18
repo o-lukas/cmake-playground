@@ -1,6 +1,6 @@
 @PACKAGE_INIT@
 
-set(_CommonUtils_supported_components StringUtils)
+set(_CommonUtils_supported_components StringUtils MathUtils)
 
 foreach(_comp ${CommonUtils_FIND_COMPONENTS})
   if (NOT _comp IN_LIST _CommonUtils_supported_components)
