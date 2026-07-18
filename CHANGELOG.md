@@ -1,3 +1,9 @@
+## v0.3.0 (2026-07-18)
+
+### Feat
+
+- create package config files
+
 ## v0.2.0 (2026-07-16)
 
 ### Feat
