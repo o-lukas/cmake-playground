@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "o-lukas/LibraryPlayground/StringUtil.hpp"
+#include "o-lukas/StringUtils/StringUtil.hpp"
 
 int main(int argc, char** argv) {
   std::string input;
@@ -26,9 +26,9 @@ int main(int argc, char** argv) {
 
   std::string output = input;
   if (upper) {
-    output = o_lukas::LibraryPlayground::StringUtil::toUpper(input);
+    output = o_lukas::StringUtils::StringUtil::toUpper(input);
   } else if (lower) {
-    output = o_lukas::LibraryPlayground::StringUtil::toLower(input);
+    output = o_lukas::StringUtils::StringUtil::toLower(input);
   }
 
   std::cout << output << '\n';

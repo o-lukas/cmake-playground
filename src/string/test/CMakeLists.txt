@@ -10,6 +10,6 @@ target_sources(${PROJECT_NAME}
     src/StringUtilTest.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE LibraryPlayground GTest::gtest_main)
+target_link_libraries(${PROJECT_NAME} PRIVATE StringUtils GTest::gtest_main)
 
 gtest_discover_tests(${PROJECT_NAME})

@@ -1,2 +1,2 @@
-add_subdirectory(exe)
-add_subdirectory(lib)
+add_subdirectory(cli)
+add_subdirectory(string)

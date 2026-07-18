@@ -1,8 +1,8 @@
-#include "o-lukas/LibraryPlayground/StringUtil.hpp"
+#include "o-lukas/StringUtils/StringUtil.hpp"
 
 #include <cctype>
 
-namespace o_lukas::LibraryPlayground {
+namespace o_lukas::StringUtils {
 
 std::string StringUtil::toUpper(const std::string& input) {
   std::string result = input;
@@ -20,4 +20,4 @@ std::string StringUtil::toLower(const std::string& input) {
   return result;
 }
 
-}  // namespace o_lukas::LibraryPlayground
+}  // namespace o_lukas::StringUtils

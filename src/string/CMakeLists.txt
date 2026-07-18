@@ -1,4 +1,4 @@
-project(LibraryPlayground)
+project(StringUtils)
 
 add_library(${PROJECT_NAME})
 add_library(o_lukas::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -11,7 +11,7 @@ target_sources(${PROJECT_NAME}
     FILE_SET HEADERS
     BASE_DIRS include
     FILES
-    include/o-lukas/LibraryPlayground/StringUtil.hpp
+    include/o-lukas/StringUtils/StringUtil.hpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -38,9 +38,9 @@ install(TARGETS ${PROJECT_NAME}
 )
 
 install(EXPORT ${PROJECT_NAME}Targets
-    FILE CMakePlayground${PROJECT_NAME}Targets.cmake
+    FILE CommonUtils${PROJECT_NAME}Targets.cmake
     NAMESPACE o_lukas::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/CMakePlayground
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/CommonUtils
     COMPONENT Development
 )
 

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.24)
 
 include(cmake/GenerateVersion.cmake)
 
-project(CMakePlayground LANGUAGES CXX VERSION ${VERSION_FULL})
+project(CommonUtils LANGUAGES CXX VERSION ${VERSION_FULL})
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -43,7 +43,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(src)
 
-set(CPACK_PACKAGE_NAME "CMakePlayground")
+set(CPACK_PACKAGE_NAME "CommonUtils")
 set(CPACK_PACKAGE_DESCRIPTION "A small CMake playground application")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
 set(CPACK_PACKAGE_CONTACT "meteor.kiwi-0i@icloud.com")

@@ -1,4 +1,4 @@
-project(ExecutablePlayground)
+project(CommonUtilsCli)
 
 find_package(CLI11 REQUIRED)
 
@@ -9,7 +9,7 @@ target_sources(${PROJECT_NAME}
     src/main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE LibraryPlayground CLI11::CLI11)
+target_link_libraries(${PROJECT_NAME} PRIVATE StringUtils CLI11::CLI11)
 
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT Runtime
