@@ -10,6 +10,7 @@ project(CommonUtils
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(CMakePackageConfigHelpers)
 include(CTest)
@@ -43,7 +44,28 @@ else()
     message(WARNING "Clang-Tidy executable not found. Static analysis will be disabled.")
 endif()
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+find_package(Doxygen)
+if(Doxygen_FOUND)
+    set(DOXYGEN_GENERATE_HTML YES)
+    set(DOXYGEN_GENERATE_LATEX NO)
+    set(DOXYGEN_EXTRACT_ALL YES)
+    set(DOXYGEN_QUIET YES)
+    set(DOXYGEN_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/docs)
+
+    file(GLOB_RECURSE _doxygen_source_files src/*)
+    doxygen_add_docs(${PROJECT_NAME}_docs
+        ${_doxygen_source_files} USE_STAMP_FILE
+        COMMENT "Generate API documentation with Doxygen"
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+
+    install(
+        DIRECTORY ${CMAKE_BINARY_DIR}/docs/html
+        DESTINATION ${CMAKE_INSTALL_DOCDIR}
+        COMPONENT Development)
+else()
+    message(WARNING "Doxygen not found. Documentation generation will be disabled.")
+endif()
 
 add_subdirectory(src)
 
