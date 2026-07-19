@@ -39,6 +39,7 @@ jobs:
         -DCMAKE_C_COMPILER=gcc
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=${{ github.workspace }}/extern/cmake-conan/conan_provider.cmake
+        -DENABLE_DOXYGEN=ON
         -S ${{ github.workspace }}
 
     - name: Create documentation
