@@ -1,3 +1,9 @@
+## v0.6.0 (2026-07-19)
+
+### Feat
+
+- **doxygen**: generate doxygen HTML documentation
+
 ## v0.5.1 (2026-07-19)
 
 ### Fix
