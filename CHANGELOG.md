@@ -1,3 +1,9 @@
+## v0.5.1 (2026-07-19)
+
+### Fix
+
+- don't build MathUtils as shared by default
+
 ## v0.5.0 (2026-07-18)
 
 ### Feat
