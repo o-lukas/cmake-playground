@@ -10,6 +10,6 @@ target_sources(${PROJECT_NAME}
     src/MathUtilTest.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE o_lukas::MathUtils GTest::gtest_main)
+target_link_libraries(${PROJECT_NAME} PRIVATE MathUtils GTest::gtest_main)
 
 gtest_discover_tests(${PROJECT_NAME})
