@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['project_0',['project',['../cli_2CMakeLists_8txt.html#ae29eab85d46ad9d47a746fc1bcb352ce',1,'project(CommonUtilsCli) find_package(CLI11 REQUIRED) add_executable($:&#160;CMakeLists.txt'],['../math_2CMakeLists_8txt.html#ab52554aece3b7b7998e61485fb463e13',1,'project(MathUtils) add_library($:&#160;CMakeLists.txt'],['../math_2test_2CMakeLists_8txt.html#a93004d8ddb81dc7d02529f05f47cbd12',1,'project(MathUtilsTest) find_package(GTest REQUIRED) include(GoogleTest) add_executable($:&#160;CMakeLists.txt'],['../string_2CMakeLists_8txt.html#a78ec92bc754e7a3d8f980816d53b16f4',1,'project(StringUtils) add_library($:&#160;CMakeLists.txt'],['../string_2test_2CMakeLists_8txt.html#a5e47ac311c0d32f19387ddd92c3b7b6b',1,'project(TestsPlayground) find_package(GTest REQUIRED) include(GoogleTest) add_executable($:&#160;CMakeLists.txt']]]
+];
