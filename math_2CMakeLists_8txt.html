@@ -82,8 +82,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab52554aece3b7b7998e61485fb463e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09de46ab2d7eb54cbb2eab005de4f321" id="r_a09de46ab2d7eb54cbb2eab005de4f321"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="math_2CMakeLists_8txt.html#a09de46ab2d7eb54cbb2eab005de4f321">add_library</a> (o_lukas::${PROJECT_NAME} ALIAS ${PROJECT_NAME}) <a class="el" href="cli_2CMakeLists_8txt.html#aaf767b35ab0cf67d1c484b74f7d58f69">target_sources</a>($</td></tr>
 <tr class="separator:a09de46ab2d7eb54cbb2eab005de4f321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82e7acbbbeb3c6a90045ec1a9fd9429d" id="r_a82e7acbbbeb3c6a90045ec1a9fd9429d"><td class="memItemLeft" align="right" valign="top">PRIVATE src MathUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas MathUtils MathUtil hpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="math_2CMakeLists_8txt.html#a82e7acbbbeb3c6a90045ec1a9fd9429d">target_include_directories</a> (${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;) <a class="el" href="cli_2CMakeLists_8txt.html#a7529ffed31bfa9a4e0c2766b1f8e9c8b">set_target_properties</a>($</td></tr>
-<tr class="separator:a82e7acbbbeb3c6a90045ec1a9fd9429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a5bdc5333c5c3be0bd4a36d302d699f" id="r_a9a5bdc5333c5c3be0bd4a36d302d699f"><td class="memItemLeft" align="right" valign="top">PRIVATE src MathUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas MathUtils MathUtil hpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="math_2CMakeLists_8txt.html#a9a5bdc5333c5c3be0bd4a36d302d699f">target_include_directories</a> (${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;) generate_export_header($</td></tr>
+<tr class="separator:a9a5bdc5333c5c3be0bd4a36d302d699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a09de46ab2d7eb54cbb2eab005de4f321" name="a09de46ab2d7eb54cbb2eab005de4f321"></a>
@@ -122,8 +122,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a82e7acbbbeb3c6a90045ec1a9fd9429d" name="a82e7acbbbeb3c6a90045ec1a9fd9429d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82e7acbbbeb3c6a90045ec1a9fd9429d">&#9670;&#160;</a></span>target_include_directories()</h2>
+<a id="a9a5bdc5333c5c3be0bd4a36d302d699f" name="a9a5bdc5333c5c3be0bd4a36d302d699f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a5bdc5333c5c3be0bd4a36d302d699f">&#9670;&#160;</a></span>target_include_directories()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
           <td class="memname">PRIVATE src MathUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas MathUtils MathUtil hpp target_include_directories </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;</em></td><td>)</td>
+          <td class="paramname"><em>${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

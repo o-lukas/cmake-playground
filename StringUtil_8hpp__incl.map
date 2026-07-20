@@ -1,5 +1,7 @@
 <map id="src/string/include/o&#45;lukas/StringUtils/StringUtil.hpp" name="src/string/include/o&#45;lukas/StringUtils/StringUtil.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,151,60"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="49,108,107,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,60,81,94,75,94,75,60"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,5,169,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,115,64,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,62,52,105,48,102,76,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="88,108,229,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,59,141,95,136,98,112,62"/>
 </map>

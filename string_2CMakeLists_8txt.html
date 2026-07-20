@@ -82,8 +82,8 @@ Functions</h2></td></tr>
 <tr class="separator:a78ec92bc754e7a3d8f980816d53b16f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09de46ab2d7eb54cbb2eab005de4f321" id="r_a09de46ab2d7eb54cbb2eab005de4f321"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_2CMakeLists_8txt.html#a09de46ab2d7eb54cbb2eab005de4f321">add_library</a> (o_lukas::${PROJECT_NAME} ALIAS ${PROJECT_NAME}) <a class="el" href="cli_2CMakeLists_8txt.html#aaf767b35ab0cf67d1c484b74f7d58f69">target_sources</a>($</td></tr>
 <tr class="separator:a09de46ab2d7eb54cbb2eab005de4f321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae704715aea7f24351571e8f445a52c" id="r_acae704715aea7f24351571e8f445a52c"><td class="memItemLeft" align="right" valign="top">PRIVATE src StringUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas StringUtils StringUtil hpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_2CMakeLists_8txt.html#acae704715aea7f24351571e8f445a52c">target_include_directories</a> (${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;) <a class="el" href="cli_2CMakeLists_8txt.html#a7529ffed31bfa9a4e0c2766b1f8e9c8b">set_target_properties</a>($</td></tr>
-<tr class="separator:acae704715aea7f24351571e8f445a52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fc4985ad2d40e484692c202ba955a1" id="r_ab9fc4985ad2d40e484692c202ba955a1"><td class="memItemLeft" align="right" valign="top">PRIVATE src StringUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas StringUtils StringUtil hpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string_2CMakeLists_8txt.html#ab9fc4985ad2d40e484692c202ba955a1">target_include_directories</a> (${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;) generate_export_header($</td></tr>
+<tr class="separator:ab9fc4985ad2d40e484692c202ba955a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a09de46ab2d7eb54cbb2eab005de4f321" name="a09de46ab2d7eb54cbb2eab005de4f321"></a>
@@ -122,8 +122,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acae704715aea7f24351571e8f445a52c" name="acae704715aea7f24351571e8f445a52c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acae704715aea7f24351571e8f445a52c">&#9670;&#160;</a></span>target_include_directories()</h2>
+<a id="ab9fc4985ad2d40e484692c202ba955a1" name="ab9fc4985ad2d40e484692c202ba955a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fc4985ad2d40e484692c202ba955a1">&#9670;&#160;</a></span>target_include_directories()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
           <td class="memname">PRIVATE src StringUtil cpp PUBLIC FILE_SET HEADERS BASE_DIRS include FILES include o lukas StringUtils StringUtil hpp target_include_directories </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;</em></td><td>)</td>
+          <td class="paramname"><em>${PROJECT_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include &gt; $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include &gt; $&lt; INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
