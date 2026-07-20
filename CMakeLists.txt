@@ -17,6 +17,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(CMakePackageConfigHelpers)
 include(CTest)
+include(GenerateExportHeader)
 include(GNUInstallDirs)
 
 write_basic_package_version_file(

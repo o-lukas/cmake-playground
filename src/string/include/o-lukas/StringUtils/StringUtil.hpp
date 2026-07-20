@@ -2,11 +2,13 @@
 
 #include <string>
 
+#include "o-lukas/StringUtils/Export.hpp"
+
 namespace o_lukas::StringUtils {
 /**
  * @brief Utility functions for string transformations.
  */
-class StringUtil {
+class STRING_UTILS_EXPORT StringUtil {
  public:
   /**
    * @brief Convert a string to uppercase.

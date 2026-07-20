@@ -16,7 +16,17 @@ target_sources(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+
+generate_export_header(${PROJECT_NAME}
+    BASE_NAME MATH_UTILS
+    EXPORT_FILE_NAME include/o-lukas/${PROJECT_NAME}/Export.hpp
+)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/o-lukas/${PROJECT_NAME}/Export.hpp
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/o-lukas/${PROJECT_NAME}
+    COMPONENT Development
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

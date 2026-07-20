@@ -1,10 +1,12 @@
 #pragma once
 
+#include "o-lukas/MathUtils/Export.hpp"
+
 namespace o_lukas::MathUtils {
 /**
  * @brief Basic math utility functions.
  */
-class MathUtil {
+class MATH_UTILS_EXPORT MathUtil {
  public:
   /**
    * @brief Add two integers.
