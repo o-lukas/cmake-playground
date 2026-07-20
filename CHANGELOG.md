@@ -1,3 +1,9 @@
+## v0.7.0 (2026-07-20)
+
+### Feat
+
+- generate export headers
+
 ## v0.6.0 (2026-07-19)
 
 ### Feat
