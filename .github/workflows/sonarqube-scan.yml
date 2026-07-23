@@ -1,0 +1,48 @@
+name: SonarQube scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-tags: true
+        fetch-depth: 0
+
+    - name: Install Conan
+      uses: conan-io/setup-conan@v1
+
+    - name: Set reusable strings
+      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+      id: strings
+      shell: bash
+      run: |
+        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+
+    - name: Configure CMake
+      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+      run: >
+        cmake -B ${{ steps.strings.outputs.build-output-dir }}
+        -DCMAKE_CXX_COMPILER=g++
+        -DCMAKE_C_COMPILER=gcc
+        -DCMAKE_BUILD_TYPE=Release
+        -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=${{ github.workspace }}/extern/cmake-conan/conan_provider.cmake
+        -S ${{ github.workspace }}
+
+    - name: Clang-tidy
+      run: |
+        run-clang-tidy -p ${{ steps.strings.outputs.build-output-dir }} > ${{ github.workspace }}/clang-tidy-results.txt || true
+
+    - name: SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v8.1.0
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
